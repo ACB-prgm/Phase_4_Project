@@ -33,7 +33,7 @@ The data was split into Train, Validation, and Test sets.
  - Tweaked using the validation set performance
  - Evaluated on the test set performance
 
-<img src="https://user-images.githubusercontent.com/63984796/228379606-cd223ed4-f4bf-45f8-9747-7f1b5e5d2a56.png" alt="MostCommonWords" width="500" align="center"/>
+<img src="https://user-images.githubusercontent.com/63984796/228379606-cd223ed4-f4bf-45f8-9747-7f1b5e5d2a56.png" alt="MostCommonWords" width="1000" align="center"/>
 
 
 ### Text Processing
