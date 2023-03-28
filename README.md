@@ -38,22 +38,22 @@ The data was split into Train, Validation, and Test sets.
 
 
 ### Text Processing
-1. Cleaning
+1. **Cleaning**
  - Remove irrelevant data such as URLs, digits, non-ASCII characters, single letter words, capitalization, and punctuation.
  - Replaced filtered swear words denoted with repeating asterisks with the word "cuss"
-2. Normalization
+2. **Normalization**
  - Removed Stop words via the `nltk` library
  - Lemmatized words to their base form
  - Replaced all references to specific products/services with the word "product"
-3. Vectorization
+3. **Vectorization**
  - Using a technique called bag-of-words, each word is assigned a numerical value.
 
  <img src="https://user-images.githubusercontent.com/63984796/228379516-09e93837-5050-488f-893f-dcc610c8617e.png" alt="TextProcessing" width="500" align="center"/>
 
 ### Model Development and Evaluation
-The pre-processed text data was then used to develop machine learning models for sentiment analysis. Two categories of models were developed: a binary classification model for predicting positive or negative sentiment, and a multiclass classification model for predicting sentiment across multiple categories. In each category, four types of models were created and evaluated:, Logistic Regression, SVC, Recurrent Neural Network, Hybrid Convolutional Neural Network.
+The pre-processed text data was then used to develop machine learning models for sentiment analysis. Two categories of models were developed: a binary classification model for predicting positive or negative sentiment, and a multiclass classification model which added a Neutral class. In each category, four types of models were created and evaluated:, Logistic Regression, SVC, Recurrent Neural Network, Hybrid Convolutional Neural Network.
 
-The machine learning models were trained and evaluated on training and validation datasets respectively. The performance of the models was then evaluated and compared on metrics of accuracy, precision, recall, and macro averaged F1 score to determine their effectiveness in predicting sentiment about products on Twitter.
+The machine learning models were trained and evaluated on training and validation datasets respectively. The performance of the models was then evaluated and compared on metrics of accuracy, precision, recall, and macro-averaged F1 score to determine their effectiveness in predicting sentiment about products on Twitter.
 
 ## Results
 ### Binary Models
@@ -69,16 +69,16 @@ The SVC model performed the best with an accuracy of 63% and an average F1-Score
 ## Value and Deployment
 ### Use Cases
 **Identifying areas for improvement**  
-For example, if the model detects a high volume of negative sentiment related to a particular product feature or customer service issue, Apple can investigate the issue and take steps to address it.
+ - For example, if the model detects a high volume of negative sentiment related to a particular product feature or customer service issue, Apple can investigate the issue and take steps to address it.
 
 **Respond to customer feedback**  
-By monitoring sentiment in real-time, Apple can identify and address customer issues and concerns before they escalate, improving customer satisfaction and loyalty.
+ - By monitoring sentiment in real-time, Apple can identify and address customer issues and concerns before they escalate, improving customer satisfaction and loyalty.
 
 **Informing product development**  
-By understanding which features or products are most commonly associated with positive or negative sentiment, Apple can prioritize development efforts and make more informed decisions about product features and design.
+ - By understanding which features or products are most commonly associated with positive or negative sentiment, Apple can prioritize development efforts and make more informed decisions about product features and design.
 
 **Monitoring competitors**  
-The sentiment analysis model can be used to monitor sentiment about Apple's competitors on Twitter, providing insights into the strengths and weaknesses of competing products and brands.
+ - The sentiment analysis model can be used to monitor sentiment about Apple's competitors on Twitter, providing insights into the strengths and weaknesses of competing products and brands.
 ### Deployment Suggestion
 Our binary sentiment analysis model can output a probability score that indicates how confident it is in its prediction. By setting a threshold of 75%, we can include only highly confident tweets, improving the quality and reliability of our predictions. Confidence thresholding ensures that the sentiment analysis model provides valuable insights to businesses.
 
